@@ -173,7 +173,7 @@
 
 				// model
 				var loader = new THREE.OBJLoader( manager );
-				loader.load( 'bird.OBJ', function ( object ) {
+				loader.load( 'bird.obj', function ( object ) {
 					bird = object;
 					bird.traverse( function ( child ) {
 						if ( child instanceof THREE.Mesh ) {
