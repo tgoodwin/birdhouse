@@ -4,6 +4,9 @@
 		<title>birdhouse</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="description" content="birdhouse online freedom purity franzen transcendence event">
+		<meta name="keywords" content="birdhouse, bird, sri chinmoy, alpha delta phi">
+		<meta name="author" content="Tim Goodwin http://timgoodwin.me">
 		<style>
 			body {
 				font-family: Helvetica;
@@ -114,8 +117,6 @@
 				$('#quote').fadeIn(1000);
 				$('#header').delay(5000).fadeIn(2000);
 				$('#details').delay(6000).fadeIn(2000);
-
-
 			});
 
 			init();
@@ -130,11 +131,10 @@
 
 				// scene
 				scene = new THREE.Scene();
-				var ambient = new THREE.AmbientLight( 0xFFFFFF ); //yellow
+				var ambient = new THREE.AmbientLight( 0xFFFFFF );
 				scene.add( ambient );
 				scene.fog = new THREE.Fog( 0xffffff, 1, 5000 );
 
-				// texture
 				var manager = new THREE.LoadingManager();
 				manager.onProgress = function ( item, loaded, total ) {
 					console.log( item, loaded, total );
@@ -164,7 +164,6 @@
 
 				var groundGeo = new THREE.PlaneBufferGeometry( 10000, 10000 );
 				var groundMat = new THREE.MeshPhongMaterial( { color: 0xf9f9f9, specular: 0x050505 } );
-				//groundMat.color.setHSL( 0.095, 1, 0.75 );
 				var ground = new THREE.Mesh( groundGeo, groundMat );
 				ground.rotation.x = -Math.PI/2;
 				ground.position.y = -70;
@@ -195,7 +194,7 @@
 					bird.scale.set(0.5,0.5,0.5);
 					scene.add( bird );
 				}, onProgress, onError );
-				//
+
 				renderer = new THREE.WebGLRenderer();
 				renderer.setPixelRatio( window.devicePixelRatio );
 				renderer.setSize( window.innerWidth, window.innerHeight );
